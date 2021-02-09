@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>	//to use system()
 
 int main() {
 
@@ -23,6 +24,8 @@ int main() {
     fprintf(fp,"defaults.ctl.card %d\n", card);
 
     fclose(fp);
+
+    system("alsactl restore");
 
     printf("Changes made succesfully!\n");
 
